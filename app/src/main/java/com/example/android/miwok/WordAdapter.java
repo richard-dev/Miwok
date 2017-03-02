@@ -15,6 +15,8 @@ import java.util.ArrayList;
  */
 
 public class WordAdapter extends ArrayAdapter<Word> {
+    // Determine if image is going to be added by looking at Word ArrayList
+    private boolean imageExists = true;
 
     // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
     // the second argument is used when the ArrayAdapter is populating a single TextView.
@@ -23,6 +25,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
     public WordAdapter(Activity context, ArrayList<Word> words) {
         // 0 in int resource because view is getting inflated in getView method
         super(context, 0, words);
+
+        if (String.valueOf(words.get(0)) == "0") {
+            imageExists = false;
+        }
     }
 
     /**
@@ -47,8 +53,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
         Word currentWord = getItem(position);
 
         // Get the imagview that will display the pics
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.pics_imageview);
-        imageView.setImageResource(currentWord.getDrawableResource());
+        if (imageExists) {
+            ImageView imageView = (ImageView) listItemView.findViewById(R.id.pics_imageview);
+            imageView.setImageResource(currentWord.getDrawableResource());
+        }
 
         // Get the textview that will display the miwok number
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_textview);

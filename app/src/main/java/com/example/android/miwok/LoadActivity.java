@@ -91,16 +91,25 @@ public class LoadActivity extends AppCompatActivity {
                 words.add(new Word(R.drawable.number_ten,"ten","na`aacha"));
                 break;
             case "Phrases":
-                words.add(new Word(R.mipmap.ic_launcher,"Where are you going?","minto wuksus"));
-                words.add(new Word(R.mipmap.ic_launcher,"What is your name?","tinnә oyaase'nә"));
-                words.add(new Word(R.mipmap.ic_launcher,"My name is...","oyaaset..."));
-                words.add(new Word(R.mipmap.ic_launcher,"How are you feeling","michәksәs?"));
-                words.add(new Word(R.mipmap.ic_launcher,"I'm feeling good.","kuchi achit"));
-                words.add(new Word(R.mipmap.ic_launcher,"Are you coming?","әәnәs'aa?"));
-                words.add(new Word(R.mipmap.ic_launcher,"Yes, I'm coming.","hәә’ әәnәm"));
-                words.add(new Word(R.mipmap.ic_launcher,"I'm coming.","әәnәm"));
-                words.add(new Word(R.mipmap.ic_launcher,"Let's go.","yoowutis"));
-                words.add(new Word(R.mipmap.ic_launcher,"Come here.","әnni'nem"));
+//                words.add(new Word(R.mipmap.ic_launcher,"Where are you going?","minto wuksus"));
+//                words.add(new Word(R.mipmap.ic_launcher,"What is your name?","tinnә oyaase'nә"));
+//                words.add(new Word(R.mipmap.ic_launcher,"My name is...","oyaaset..."));
+//                words.add(new Word(R.mipmap.ic_launcher,"How are you feeling","michәksәs?"));
+//                words.add(new Word(R.mipmap.ic_launcher,"I'm feeling good.","kuchi achit"));
+//                words.add(new Word(R.mipmap.ic_launcher,"Are you coming?","әәnәs'aa?"));
+//                words.add(new Word(R.mipmap.ic_launcher,"Yes, I'm coming.","hәә’ әәnәm"));
+//                words.add(new Word(R.mipmap.ic_launcher,"I'm coming.","әәnәm"));
+//                words.add(new Word(R.mipmap.ic_launcher,"Let's go.","yoowutis"));
+//                words.add(new Word(R.mipmap.ic_launcher,"Come here.","әnni'nem"));
+                words.add(new Word(0,"What is your name?","tinnә oyaase'nә"));
+                words.add(new Word(0,"My name is...","oyaaset..."));
+                words.add(new Word(0,"How are you feeling","michәksәs?"));
+                words.add(new Word(0,"I'm feeling good.","kuchi achit"));
+                words.add(new Word(0,"Are you coming?","әәnәs'aa?"));
+                words.add(new Word(0,"Yes, I'm coming.","hәә’ әәnәm"));
+                words.add(new Word(0,"I'm coming.","әәnәm"));
+                words.add(new Word(0,"Let's go.","yoowutis"));
+                words.add(new Word(0,"Come here.","әnni'nem"));
                 break;
         }
 
