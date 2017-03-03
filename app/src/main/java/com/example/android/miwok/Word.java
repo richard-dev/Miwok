@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
  */
 
 public class Word {
-    private int mDrawableResource;
+    private int mDrawableResource = -1;
 
     private String mDefaultTranslation;
 
@@ -32,5 +32,9 @@ public class Word {
 
     public String getMiwokTranslation() {
         return mMiwokTranslation;
+    }
+
+    public boolean hasImage() {
+        return mDrawableResource != -1;
     }
 }
