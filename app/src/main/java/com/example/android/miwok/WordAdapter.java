@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -47,8 +48,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Get the imagview that will display the pics
         if (currentWord.hasImage()) {
+            // If image is being passed, set background.
             ImageView imageView = (ImageView) listItemView.findViewById(R.id.pics_imageview);
             imageView.setImageResource(currentWord.getDrawableResource());
+            imageView.setBackgroundResource(R.color.tan_background);
+        } else {
+            // If no image, then hide the pics layout container.
+            LinearLayout picsLayout = (LinearLayout) listItemView.findViewById(R.id.pics_container);
+            picsLayout.setVisibility(View.GONE);
         }
 
         // Get the textview that will display the miwok number
@@ -58,6 +65,28 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the textview that will display the default language number
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_textview);
         defaultTextView.setText(currentWord.getDefaultTranslation());
+
+        // Set color based on activity
+        String activity = currentWord.getActivity();
+        int colorResource;
+        switch (activity) {
+            case "Colors":
+                colorResource = R.color.category_numbers;
+                break;
+            case "Family":
+                colorResource = R.color.category_family;
+                break;
+            case "Numbers":
+                colorResource = R.color.category_numbers;
+                break;
+            case "Phrases":
+                colorResource = R.color.category_phrases;
+                break;
+            default:
+                colorResource = R.color.category_default;
+        }
+
+        listItemView.setBackgroundResource(colorResource);
 
         return listItemView;
     }

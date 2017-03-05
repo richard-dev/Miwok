@@ -8,6 +8,8 @@ import android.support.annotation.NonNull;
  */
 
 public class Word {
+    private String mActivity;
+
     private int mDrawableResource = -1;
 
     private String mDefaultTranslation;
@@ -15,13 +17,17 @@ public class Word {
     private String mMiwokTranslation;
 
     // Constructor
-    public Word(int drawableResource, String defaultTranslation, String miwokTranslation) {
+    public Word(String activity, int drawableResource, String defaultTranslation, String miwokTranslation) {
+        mActivity = activity;
         mDrawableResource = drawableResource;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
     }
 
     // Getters
+    public String getActivity() {
+        return mActivity;
+    }
     public int getDrawableResource() {
         return mDrawableResource;
     }
