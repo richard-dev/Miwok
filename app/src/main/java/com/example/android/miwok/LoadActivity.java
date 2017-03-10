@@ -43,6 +43,7 @@ public class LoadActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+             // test
                 Word word = words.get(position);
                 mMediaPlayer = MediaPlayer.create(LoadActivity.this, word.getMediaResource());
                 mMediaPlayer.start();
