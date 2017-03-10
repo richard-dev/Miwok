@@ -12,14 +12,17 @@ public class Word {
 
     private int mDrawableResource = -1;
 
+    private int mMediaResource = -1;
+
     private String mDefaultTranslation;
 
     private String mMiwokTranslation;
 
     // Constructor
-    public Word(String activity, int drawableResource, String defaultTranslation, String miwokTranslation) {
+    public Word(String activity, int drawableResource, int mediaResource, String defaultTranslation, String miwokTranslation) {
         mActivity = activity;
         mDrawableResource = drawableResource;
+        mMediaResource = mediaResource;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
     }
@@ -30,6 +33,10 @@ public class Word {
     }
     public int getDrawableResource() {
         return mDrawableResource;
+    }
+
+    public int getMediaResource() {
+        return mMediaResource;
     }
 
     public String getDefaultTranslation() {

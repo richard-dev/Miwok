@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,8 +55,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setBackgroundResource(R.color.tan_background);
         } else {
             // If no image, then hide the pics layout container.
-            LinearLayout picsLayout = (LinearLayout) listItemView.findViewById(R.id.pics_container);
-            picsLayout.setVisibility(View.GONE);
+            LinearLayout picsContainer = (LinearLayout) listItemView.findViewById(R.id.pics_container);
+            picsContainer.setVisibility(View.GONE);
         }
 
         // Get the textview that will display the miwok number
@@ -65,6 +66,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the textview that will display the default language number
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_textview);
         defaultTextView.setText(currentWord.getDefaultTranslation());
+
 
         // Set color based on activity
         String activity = currentWord.getActivity();
@@ -85,7 +87,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
             default:
                 colorResource = R.color.category_default;
         }
-
         listItemView.setBackgroundResource(colorResource);
 
         return listItemView;
