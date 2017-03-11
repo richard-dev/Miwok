@@ -25,6 +25,8 @@ play audio files.
 
 -AudioManager
 
+request audio focus before playback.
+
 handle different audio states like what happens when Miwok app is interrupted by other audio sources.
 
 -App Lifecycle
