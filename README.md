@@ -18,3 +18,6 @@ releaes MediaPlayer resources so that the app doesn't keep starting a new MediaP
 
 MediaPlayer
 play audio files.
+
+App Lifecycle
+onStop(); release MediaPlayer.
