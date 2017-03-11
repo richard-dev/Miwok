@@ -23,6 +23,10 @@ releaes MediaPlayer resources so that the app doesn't keep starting a new MediaP
 
 play audio files.
 
+-AudioManager
+
+handle different audio states like what happens when Miwok app is interrupted by other audio sources.
+
 -App Lifecycle
 
 onStop(); 
