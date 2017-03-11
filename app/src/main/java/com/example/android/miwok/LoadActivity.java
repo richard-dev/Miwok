@@ -1,28 +1,54 @@
 package com.example.android.miwok;
 
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.util.ArrayList;
 
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 
-import static com.example.android.miwok.R.color.category_default;
-import static java.security.AccessController.getContext;
+import static android.media.AudioManager.AUDIOFOCUS_LOSS_TRANSIENT;
 
 public class LoadActivity extends AppCompatActivity {
+    // Global variables
     private MediaPlayer mMediaPlayer;
+    private AudioManager mAudioManager;
+
+    // Audio Focus Change Listener
+    AudioManager.OnAudioFocusChangeListener audioFocusChangeListener =
+            new AudioManager.OnAudioFocusChangeListener() {
+                public void onAudioFocusChange(int focusChange) {
+                    switch (focusChange) {
+                        case AUDIOFOCUS_LOSS_TRANSIENT:
+                            // Pause if loss of audio focus for a short period of time
+                            break;
+                        case AudioManager.AUDIOFOCUS_GAIN:
+                            // Resume playback
+                            break;
+                        case AudioManager.AUDIOFOCUS_LOSS:
+                            // Stop playback if audio focus completely lost
+                            am.unregisterMediaButtonEventReceiver(RemoteControlReceiver);
+                            am.abandonAudioFocus(audioFocusChangeListener);
+                            break;
+                    }
+                }
+            };
     private ArrayList<Word> words;
+
+
+    // Set a single instance of an OnCompletionListener that releases MediaPlayer on completion.
+    private MediaPlayer.OnCompletionListener mediaCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,20 +59,40 @@ public class LoadActivity extends AppCompatActivity {
         Intent incomingIntent = getIntent();
         String activity = incomingIntent.getStringExtra("loadActivity");
 
-        WordAdapter adapter = new WordAdapter(this, loadWords(activity));
+        // Get the content of WordAdapater
+        WordAdapter adapter = new WordAdapter(this, getWords(activity));
         ListView listView = (ListView) findViewById(R.id.list);
 
         // Load adapter into listView
         listView.setAdapter(adapter);
 
-        // Onclick listener
+        // Set Audio Focus
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+        // Onclick listener for media files
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-             // test
                 Word word = words.get(position);
-                mMediaPlayer = MediaPlayer.create(LoadActivity.this, word.getMediaResource());
-                mMediaPlayer.start();
+
+                // Release existing mediaPlayer
+                mediaPlayerRelease();
+
+                // Request audio focus for playback
+                int result = mAudioManager.requestAudioFocus(audioFocusChangeListener,
+                        AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+                // If Audio Focus is granted, create MediaPlayer
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                    mAudioManager.registerMediaButtonEventReceiver(RemoteControlreceiver);
+
+                    // Create media player
+                    mMediaPlayer = MediaPlayer.create(LoadActivity.this, word.getMediaResource());
+                    mMediaPlayer.start();
+
+                    // Set OnCompletionListener to mMedia Player
+                    mMediaPlayer.setOnCompletionListener(mediaCompletionListener);
+                }
             }
         });
 
@@ -54,18 +100,22 @@ public class LoadActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(activity);
     }
 
-//    switch (activityIntent) {
-//        case "Colors":
-//            break;
-//        case "Family":
-//            break;
-//        case "Numbers":
-//            break;
-//        case "Phrases":
-//            break;
-//    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayerRelease();
+    }
 
-    private ArrayList<Word> loadWords(String activity) {
+    private void mediaPlayerRelease() {
+        // Check if existing media player
+        if (mMediaPlayer != null) {
+            // If media player exists, then release it.
+            mMediaPlayer.release();
+        }
+
+    }
+
+    private ArrayList<Word> getWords(String activity) {
         words = new ArrayList<>();
 
         switch (activity) {
@@ -119,5 +169,16 @@ public class LoadActivity extends AppCompatActivity {
 
         return words;
     }
+
+    //    switch (activityIntent) {
+//        case "Colors":
+//            break;
+//        case "Family":
+//            break;
+//        case "Numbers":
+//            break;
+//        case "Phrases":
+//            break;
+//    }
 
 }

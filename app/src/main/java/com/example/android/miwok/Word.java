@@ -50,4 +50,16 @@ public class Word {
     public boolean hasImage() {
         return mDrawableResource != -1;
     }
+
+    // For logging
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mActivity='" + mActivity + '\'' +
+                ", mDrawableResource=" + mDrawableResource +
+                ", mMediaResource=" + mMediaResource +
+                ", mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                '}';
+    }
 }
