@@ -5,19 +5,25 @@ My project differs slightly from Udacity in that I use one LoadActivity.java fil
 
 This project utilizies these concepts:
 
-ArrayAdapters
+-ArrayAdapters
+
 Load ListView with list items using custom ArrayAdapter that uses custom ArrayList.
 
-ArrayLists
+-ArrayLists
+
 create custom ArrayLists to accept more than one parameter.
 
-ListViews
+-ListViews
 
-setOnItemClickListener
+-setOnItemClickListener
+
 releaes MediaPlayer resources so that the app doesn't keep starting a new MediaPlayer and overlap.
 
-MediaPlayer
+-MediaPlayer
+
 play audio files.
 
-App Lifecycle
-onStop(); release MediaPlayer.
+-App Lifecycle
+
+onStop(); 
+release MediaPlayer.
