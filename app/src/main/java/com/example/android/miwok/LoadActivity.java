@@ -49,7 +49,7 @@ public class LoadActivity extends AppCompatActivity {
 
     private ArrayList<Word> mWords;
     // *** Global Variables end
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,6 +96,9 @@ public class LoadActivity extends AppCompatActivity {
 
         // Set title
         getSupportActionBar().setTitle(activity);
+
+        // Show up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
