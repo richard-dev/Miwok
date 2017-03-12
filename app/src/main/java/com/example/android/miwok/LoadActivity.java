@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class LoadActivity extends AppCompatActivity {
+    //*** Global Variables
     // Media Variables
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
@@ -47,7 +48,8 @@ public class LoadActivity extends AppCompatActivity {
     };
 
     private ArrayList<Word> mWords;
-
+    // *** Global Variables end
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

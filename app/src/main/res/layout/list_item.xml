@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="horizontal">
 
     <LinearLayout
+        android:id="@+id/pics_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:id="@+id/pics_container">
+        android:layout_weight="6">
 
         <ImageView
+            android:id="@+id/pics_imageview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/pics_imageview"
-            tools:src="@mipmap/ic_launcher"
-            android:padding="16dp" />
+            android:padding="16dp"
+            tools:src="@mipmap/ic_launcher" />
 
     </LinearLayout>
 
@@ -29,17 +29,17 @@
         android:padding="16dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/miwok_textview"
             style="@style/wordStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:text="miwok" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/default_textview"
             style="@style/wordStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:text="default" />
 
     </LinearLayout>
@@ -51,11 +51,11 @@
         android:padding="16dp">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
             android:id="@+id/media_actions"
             style="@style/wordStyle"
-            android:src="@drawable/ic_play_circle_outline_black_24dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_play_circle_outline_black_24dp" />
 
     </LinearLayout>
 
