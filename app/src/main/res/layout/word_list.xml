@@ -4,7 +4,7 @@
     android:id="@+id/list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.miwok.LoadActivity"
+    tools:context="com.example.android.miwok.MainActivity"
     android:orientation="vertical"
     android:numColumns="auto_fit"
     android:gravity="center"
