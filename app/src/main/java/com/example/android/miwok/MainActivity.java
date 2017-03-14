@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.content.Intent;
@@ -31,49 +32,55 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Set listeners for all clickables
-        setListeners();
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+        // Create an adapter that knows which fragment should be shown on each page
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
     }
 
-    private void setListeners() {
-        TextView[] textView = new TextView[4];
-        textView[0] = (TextView) findViewById(R.id.colors);
-        textView[1] = (TextView) findViewById(R.id.family);
-        textView[2] = (TextView) findViewById(R.id.numbers);
-        textView[3] = (TextView) findViewById(R.id.phrases);
-
-        for (int i = 0; i < textView.length; i++) {
-            textView[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    String toastMessage = "Miwok";
-                    Intent intent = new Intent(view.getContext(), LoadActivity.class);
-
-                    switch (view.getId()) {
-                        case (R.id.colors):
-                            intent.putExtra("loadActivity","Colors");
-                            toastMessage = "Colors";
-                            break;
-                        case (R.id.family):
-                            intent.putExtra("loadActivity","Family");
-                            toastMessage = "Family";
-                            break;
-                        case (R.id.numbers):
-                            intent.putExtra("loadActivity","Numbers");
-                            toastMessage = "Numbers";
-                            break;
-                        case (R.id.phrases):
-                            intent.putExtra("loadActivity","Phrases");
-                            toastMessage = "Phrases";
-                            break;
-                    }
-                    view.getContext().startActivity(intent);
-
-                    //Toast Message
-                    Toast.makeText(view.getContext(), "Welcome to " + toastMessage + "!", Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    }
+//    private void setListeners() {
+//        TextView[] textView = new TextView[4];
+//        textView[0] = (TextView) findViewById(R.id.colors);
+//        textView[1] = (TextView) findViewById(R.id.family);
+//        textView[2] = (TextView) findViewById(R.id.numbers);
+//        textView[3] = (TextView) findViewById(R.id.phrases);
+//
+//        for (int i = 0; i < textView.length; i++) {
+//            textView[i].setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    String toastMessage = "Miwok";
+//                    Intent intent = new Intent(view.getContext(), LoadActivity.class);
+//
+//                    switch (view.getId()) {
+//                        case (R.id.colors):
+//                            intent.putExtra("loadActivity","Colors");
+//                            toastMessage = "Colors";
+//                            break;
+//                        case (R.id.family):
+//                            intent.putExtra("loadActivity","Family");
+//                            toastMessage = "Family";
+//                            break;
+//                        case (R.id.numbers):
+//                            intent.putExtra("loadActivity","Numbers");
+//                            toastMessage = "Numbers";
+//                            break;
+//                        case (R.id.phrases):
+//                            intent.putExtra("loadActivity","Phrases");
+//                            toastMessage = "Phrases";
+//                            break;
+//                    }
+//                    view.getContext().startActivity(intent);
+//
+//                    //Toast Message
+//                    Toast.makeText(view.getContext(), "Welcome to " + toastMessage + "!", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//        }
+//    }
 
 }

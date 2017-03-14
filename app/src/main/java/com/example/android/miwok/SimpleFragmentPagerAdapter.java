@@ -1,5 +1,7 @@
 package com.example.android.miwok;
 
+import android.app.Activity;
+import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
@@ -15,7 +17,11 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new ActivityFragment();
+        ActivityFragment fragment = new ActivityFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("position", String.valueOf(position));
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override

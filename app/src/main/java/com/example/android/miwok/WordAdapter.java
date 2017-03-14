@@ -68,20 +68,20 @@ public class WordAdapter extends ArrayAdapter<Word> {
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
 
-        // Set color based on activity
+        // Set background color based on activity
         String activity = currentWord.getActivity();
         int colorResource;
         switch (activity) {
-            case "Colors":
+            case "0":
                 colorResource = R.color.category_numbers;
                 break;
-            case "Family":
+            case "1":
                 colorResource = R.color.category_family;
                 break;
-            case "Numbers":
+            case "2":
                 colorResource = R.color.category_numbers;
                 break;
-            case "Phrases":
+            case "3":
                 colorResource = R.color.category_phrases;
                 break;
             default:
