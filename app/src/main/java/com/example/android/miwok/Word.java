@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
  */
 
 public class Word {
-    private String mActivity;
+    private int mActivityPosition;
 
     private int mDrawableResource = -1;
 
@@ -19,8 +19,8 @@ public class Word {
     private String mMiwokTranslation;
 
     // Constructor
-    public Word(String activity, int drawableResource, int mediaResource, String defaultTranslation, String miwokTranslation) {
-        mActivity = activity;
+    public Word(int activityPosition, int drawableResource, int mediaResource, String defaultTranslation, String miwokTranslation) {
+        mActivityPosition = activityPosition;
         mDrawableResource = drawableResource;
         mMediaResource = mediaResource;
         mDefaultTranslation = defaultTranslation;
@@ -28,8 +28,8 @@ public class Word {
     }
 
     // Getters
-    public String getActivity() {
-        return mActivity;
+    public int getActivityPosition() {
+        return mActivityPosition;
     }
     public int getDrawableResource() {
         return mDrawableResource;
@@ -55,7 +55,7 @@ public class Word {
     @Override
     public String toString() {
         return "Word{" +
-                "mActivity='" + mActivity + '\'' +
+                "mActivityPosition='" + mActivityPosition + '\'' +
                 ", mDrawableResource=" + mDrawableResource +
                 ", mMediaResource=" + mMediaResource +
                 ", mDefaultTranslation='" + mDefaultTranslation + '\'' +

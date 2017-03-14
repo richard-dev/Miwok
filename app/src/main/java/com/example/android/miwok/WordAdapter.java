@@ -1,7 +1,6 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,19 +68,19 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
 
         // Set background color based on activity
-        String activity = currentWord.getActivity();
+        int activityPosition = currentWord.getActivityPosition();
         int colorResource;
-        switch (activity) {
-            case "0":
+        switch (activityPosition) {
+            case 0:
                 colorResource = R.color.category_numbers;
                 break;
-            case "1":
+            case 1:
                 colorResource = R.color.category_family;
                 break;
-            case "2":
-                colorResource = R.color.category_numbers;
+            case 2:
+                colorResource = R.color.category_colors;
                 break;
-            case "3":
+            case 3:
                 colorResource = R.color.category_phrases;
                 break;
             default:

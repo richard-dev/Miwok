@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -20,8 +21,6 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ActivityFragment extends Fragment {
-    // Activity Intent from SimpleFragmentPagerAdapter
-    private String mActivityIntent;
     // Media Variables
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
@@ -58,7 +57,6 @@ public class ActivityFragment extends Fragment {
     private ArrayList<Word> mWords;
     //Global End
 
-
     public ActivityFragment() {
         // Required empty public constructor
     }
@@ -68,8 +66,8 @@ public class ActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
-        // Get Arguments from SimplePagerAdapter
-        String activityPosition = getArguments().getString("position");
+        // Get Arguments from ActivityFragmentAdapter
+        int activityPosition = getArguments().getInt("position");
 
         // Get the content of WordAdapater
         WordAdapter adapter = new WordAdapter(getActivity(), getWords(activityPosition));
@@ -109,37 +107,11 @@ public class ActivityFragment extends Fragment {
         return rootView;
     }
 
-    private ArrayList<Word> getWords(String activityPosition) {
+    private ArrayList<Word> getWords(int activityPosition) {
         mWords = new ArrayList<>();
-        String title = "Miwok";
 
         switch (activityPosition) {
-            case "0":
-                title = "Colors";
-                mWords.add(new Word(activityPosition,R.drawable.color_red,R.raw.color_red,"red","weṭeṭṭi"));
-                mWords.add(new Word(activityPosition,R.drawable.color_green,R.raw.color_green, "green","chokokki"));
-                mWords.add(new Word(activityPosition,R.drawable.color_brown,R.raw.color_brown,"brown","taktaakki"));
-                mWords.add(new Word(activityPosition,R.drawable.color_gray,R.raw.color_gray, "gray","topoppi"));
-                mWords.add(new Word(activityPosition,R.drawable.color_black,R.raw.color_black,"black","kululli"));
-                mWords.add(new Word(activityPosition,R.drawable.color_white,R.raw.color_white,"white","kelelli"));
-                mWords.add(new Word(activityPosition,R.drawable.color_dusty_yellow,R.raw.color_dusty_yellow,"dusty yellow","ṭopiisә"));
-                mWords.add(new Word(activityPosition,R.drawable.color_mustard_yellow,R.raw.color_mustard_yellow,"mustard yellow","chiwiiṭә"));
-                break;
-            case "1":
-                title = "Family";
-                mWords.add(new Word(activityPosition,R.drawable.family_father,R.raw.family_father,"father","әpә"));
-                mWords.add(new Word(activityPosition,R.drawable.family_mother,R.raw.family_mother,"mother","әṭa"));
-                mWords.add(new Word(activityPosition,R.drawable.family_son,R.raw.family_son,"son","angsi"));
-                mWords.add(new Word(activityPosition,R.drawable.family_daughter,R.raw.family_daughter,"daughter","tune"));
-                mWords.add(new Word(activityPosition,R.drawable.family_older_brother,R.raw.family_older_brother,"older brother","taachi"));
-                mWords.add(new Word(activityPosition,R.drawable.family_younger_brother,R.raw.family_younger_brother,"younger brother","chalitti"));
-                mWords.add(new Word(activityPosition,R.drawable.family_older_sister,R.raw.family_younger_sister,"older sister","tete"));
-                mWords.add(new Word(activityPosition,R.drawable.family_younger_sister,R.raw.family_younger_sister,"younger sister","kolliti"));
-                mWords.add(new Word(activityPosition,R.drawable.family_grandmother,R.raw.family_grandmother,"grandmother","ama"));
-                mWords.add(new Word(activityPosition,R.drawable.family_grandfather,R.raw.family_grandfather,"grandfather","paapa"));
-                break;
-            case "2":
-                title = "Numbers";
+            case 0:
                 mWords.add(new Word(activityPosition,R.drawable.number_one,R.raw.number_one,"one","lutti"));
                 mWords.add(new Word(activityPosition,R.drawable.number_two,R.raw.number_two,"two","otiiko"));
                 mWords.add(new Word(activityPosition,R.drawable.number_three,R.raw.number_three,"three","tolookosu"));
@@ -151,8 +123,29 @@ public class ActivityFragment extends Fragment {
                 mWords.add(new Word(activityPosition,R.drawable.number_nine,R.raw.number_nine,"nine","wo`e"));
                 mWords.add(new Word(activityPosition,R.drawable.number_ten,R.raw.number_ten,"ten","na`aacha"));
                 break;
-            case "3":
-                title = "Phrases";
+            case 1:
+                mWords.add(new Word(activityPosition,R.drawable.family_father,R.raw.family_father,"father","әpә"));
+                mWords.add(new Word(activityPosition,R.drawable.family_mother,R.raw.family_mother,"mother","әṭa"));
+                mWords.add(new Word(activityPosition,R.drawable.family_son,R.raw.family_son,"son","angsi"));
+                mWords.add(new Word(activityPosition,R.drawable.family_daughter,R.raw.family_daughter,"daughter","tune"));
+                mWords.add(new Word(activityPosition,R.drawable.family_older_brother,R.raw.family_older_brother,"older brother","taachi"));
+                mWords.add(new Word(activityPosition,R.drawable.family_younger_brother,R.raw.family_younger_brother,"younger brother","chalitti"));
+                mWords.add(new Word(activityPosition,R.drawable.family_older_sister,R.raw.family_younger_sister,"older sister","tete"));
+                mWords.add(new Word(activityPosition,R.drawable.family_younger_sister,R.raw.family_younger_sister,"younger sister","kolliti"));
+                mWords.add(new Word(activityPosition,R.drawable.family_grandmother,R.raw.family_grandmother,"grandmother","ama"));
+                mWords.add(new Word(activityPosition,R.drawable.family_grandfather,R.raw.family_grandfather,"grandfather","paapa"));
+                break;
+            case 2:
+                mWords.add(new Word(activityPosition,R.drawable.color_red,R.raw.color_red,"red","weṭeṭṭi"));
+                mWords.add(new Word(activityPosition,R.drawable.color_green,R.raw.color_green, "green","chokokki"));
+                mWords.add(new Word(activityPosition,R.drawable.color_brown,R.raw.color_brown,"brown","taktaakki"));
+                mWords.add(new Word(activityPosition,R.drawable.color_gray,R.raw.color_gray, "gray","topoppi"));
+                mWords.add(new Word(activityPosition,R.drawable.color_black,R.raw.color_black,"black","kululli"));
+                mWords.add(new Word(activityPosition,R.drawable.color_white,R.raw.color_white,"white","kelelli"));
+                mWords.add(new Word(activityPosition,R.drawable.color_dusty_yellow,R.raw.color_dusty_yellow,"dusty yellow","ṭopiisә"));
+                mWords.add(new Word(activityPosition,R.drawable.color_mustard_yellow,R.raw.color_mustard_yellow,"mustard yellow","chiwiiṭә"));
+                break;
+            case 3:
                 mWords.add(new Word(activityPosition,-1,R.raw.phrase_where_are_you_going,"Where are you going?","minto wuksus"));
                 mWords.add(new Word(activityPosition,-1,R.raw.phrase_what_is_your_name,"What is your name?","tinnә oyaase'nә"));
                 mWords.add(new Word(activityPosition,-1,R.raw.phrase_my_name_is,"My name is...","oyaaset..."));
@@ -165,9 +158,6 @@ public class ActivityFragment extends Fragment {
                 mWords.add(new Word(activityPosition,-1,R.raw.phrase_come_here,"Come here.","әnni'nem"));
                 break;
         }
-
-        // Set title
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
 
         return mWords;
     }
