@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/27ad1cedc52a673e0a75b45821fc9c6e76d88d25/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b9e13efe8895b396ff2a0e54a77ae5066c4f1143/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/27ad1cedc52a673e0a75b45821fc9c6e76d88d25/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_b3b96702cb9380316ad8243e5281a1c3286a9a31/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/80ed6414be060395a727bc03d29f55f405b27802/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c3d600ad7f2c251bb83be7348f6750af767a9238/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0a76e8773395c75ac5fdadebbfa1da5020692d61">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b8c3622c841a63f7447a918fd858871ae6e1b0cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/b0ea2aab594efe2cee8ef7e983de41364f8040b6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10170435c82667cc47a1972a1b83284af9db96df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/d6807c13e15aac9cd21001391a7fdeb0ca8ca51d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e338d53a9b3710931898e79ea70e8006f6d03d1a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_6e1ab32c8a7f0ebd138bd56be3d79ddfa4417437/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/6e6a7c3a3ee0ae7a71b038d2881780de580bc0c7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_590836f9829aa21acbb009ace65d90c875983648/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/.android/build-cache/7f8914de55597188284a79a7fcb83cca653195d0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ce2300271b1925b54ed294fc367141e62817ffc6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6a8eede8bf944153dcd55eedd4ba9cc0cc4902a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/richard/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_6e1ab32c8a7f0ebd138bd56be3d79ddfa4417437/classes.dex" />
+    </item>
+
+</items>

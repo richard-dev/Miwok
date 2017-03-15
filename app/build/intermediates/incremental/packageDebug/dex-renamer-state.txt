@@ -1,0 +1,7 @@
+#Wed Mar 15 17:57:37 EDT 2017
+base.0=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b8c3622c841a63f7447a918fd858871ae6e1b0cb
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6a8eede8bf944153dcd55eedd4ba9cc0cc4902a/classes.dex
+base.1=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6a8eede8bf944153dcd55eedd4ba9cc0cc4902a
+file.0=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b8c3622c841a63f7447a918fd858871ae6e1b0cb/classes.dex

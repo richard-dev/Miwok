@@ -1,0 +1,25 @@
+#Wed Mar 15 17:57:36 EDT 2017
+renamed.7=classes4.dex
+renamed.6=classes6.dex
+renamed.5=classes2.dex
+renamed.4=classes3.dex
+renamed.3=classes8.dex
+renamed.2=classes.dex
+renamed.1=classes5.dex
+renamed.0=classes7.dex
+base.7=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c3d600ad7f2c251bb83be7348f6750af767a9238
+base.6=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e338d53a9b3710931898e79ea70e8006f6d03d1a
+base.5=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_590836f9829aa21acbb009ace65d90c875983648
+base.4=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b9e13efe8895b396ff2a0e54a77ae5066c4f1143
+base.3=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_6e1ab32c8a7f0ebd138bd56be3d79ddfa4417437
+base.2=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10170435c82667cc47a1972a1b83284af9db96df
+base.1=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ce2300271b1925b54ed294fc367141e62817ffc6
+base.0=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_b3b96702cb9380316ad8243e5281a1c3286a9a31
+file.7=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c3d600ad7f2c251bb83be7348f6750af767a9238/classes.dex
+file.6=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e338d53a9b3710931898e79ea70e8006f6d03d1a/classes.dex
+file.5=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_590836f9829aa21acbb009ace65d90c875983648/classes.dex
+file.4=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b9e13efe8895b396ff2a0e54a77ae5066c4f1143/classes.dex
+file.3=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_6e1ab32c8a7f0ebd138bd56be3d79ddfa4417437/classes.dex
+file.2=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10170435c82667cc47a1972a1b83284af9db96df/classes.dex
+file.1=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ce2300271b1925b54ed294fc367141e62817ffc6/classes.dex
+file.0=/Users/richard/Dropbox/android/Miwok/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_b3b96702cb9380316ad8243e5281a1c3286a9a31/classes.dex
